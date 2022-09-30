@@ -2,20 +2,30 @@ const router = require('express').Router();
 const { Favorites } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-// GET all locations
-router.get('/', async (req, res) => {
+// will add withAuth afer login is created
+
+// GET all favorites
+router.get('/', withAuth, async (req, res) => {
   try {
-    const favorites = await Favorites.findAll();
+    const favorites = await Favorites.findAll({
+     where: {
+          user_id: req.session.user_id
+        },
+        include: [{ model: User }]
+    });
     res.status(200).json(favorites);
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
-// // CREATE a location
-router.post('/', async (req, res) => {
+// CREATE a favorite
+router.post('/', withAuth, async (req, res) => {
 try {
-    const favorite = await Favorites.create(req.body);
+  const newFavorite = {
+    user_id: req.session.user_id
+  }
+  const favorite = await Favorites.create(req.body);
     res.status(200).json(favorite);
   } catch (err) {
     res.status(400).json(err);
@@ -23,7 +33,7 @@ try {
 });
 
 // DELETE a favorite
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', withAuth, async (req, res) => {
   try {
     const favoriteData = await Favorites.destroy({
       where: {
