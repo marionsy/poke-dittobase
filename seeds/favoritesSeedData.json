@@ -1,0 +1,17 @@
+[
+  {
+    "nickname": "mr squirtle",
+    "pokemon_name": "squirtle",
+    "user_id": 1
+  },
+  {
+    "nickname": "ms piplup",
+    "pokemon_name": "piplup",
+    "user_id": 2
+  },
+  {
+    "nickname": "bamf",
+    "pokemon_name": "empoleon",
+    "user_id": 3
+  }
+]
