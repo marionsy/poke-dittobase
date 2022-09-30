@@ -30,7 +30,7 @@ router.get('/', async (req, res) => {
 //   }
 // });
 
-// // CREATE a location
+// // CREATE a favorite
 router.post('/', async (req, res) => {
 try {
     const favorite = await Favorites.create(req.body);
@@ -40,7 +40,7 @@ try {
   }
 });
 
-// DELETE a location
+// DELETE a favorite
 router.delete('/:id', async (req, res) => {
   try {
     const favoriteData = await Favorites.destroy({
