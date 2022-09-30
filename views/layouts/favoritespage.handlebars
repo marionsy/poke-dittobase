@@ -1,4 +1,4 @@
-{{#if loggedIn}}
+{{#if logged_in}}
 <section class="favorite-Pokemon">
   <img src="/images/{{.filename}}" alt="{{pokemon.description}}">
   <div class="myPokemon">
@@ -22,5 +22,5 @@
 </section>
 <!-- Otherwise, provide a link to login -->
 {{else}}
-<a href="/login">You must login first to see your saved pokemon!</a>
+<p>You must login first to see your saved pokemon!</p>
 {{/if}}

@@ -1,178 +1,178 @@
 $primarycolor: #FFCB05;
 $Secondarycolor: #3466AF;
 
+body {
+  font-family: Arial;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: flex-start;
+  /* background-image: url(https://i.pinimg.com/originals/6f/c7/34/6fc73482bc62c6b208cc9f8b9cf1c888.jpg); */
+  background-size: 150%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+a {
+  color: var(--dark);
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
 header {
-    background-color: $Secondarycolor;
+  padding: 40px;
+  text-align: center;
+  background: var(--primary);
+  color: var(--light);
 }
 
-body{
-    background-color: $primarycolor;
+main {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 2%;
 }
 
-.login {
-    padding-top: 120px;
 
-  }
-  
-  .signup {
-    padding-top: 105px;
-  }
+nav {
+  display: flex;
+  background-color: var(--secondary);
+}
 
-.link {
-    color: $primarycolor;
-    margin-bottom: -25;
-  }
-  .link:hover {
-    color: $Secondarycolor;
-  }
-  .full-height{
-    min-height: 100vh;
-  }
-  [type="checkbox"]:checked,
-  [type="checkbox"]:not(:checked){
-    position: absolute;
-    left: -999px;
-  }
-  .checkbox:checked + label,
-  .checkbox:not(:checked) + label{
-    position: relative;
-    display: block;
-    text-align: center;
-    width: 60px;
-    height: 16px;
-    border-radius: 9px;
-    padding: 0;
-    margin: 10px auto;
-    background-color: $Secondarycolor;
-  }
-  .checkbox:checked + label:before,
-  .checkbox:not(:checked) + label:before{
-    position: absolute;
-    display: block;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background-image: $Secondarycolor;
-    content: url('https://api.iconify.design/mdi/pokeball.svg?  rotate=90deg&flip=vertical');
-    z-index: 20;
-    top: -10px;
-    left: -10px;
-    line-height: 36px;
-    text-align: center;
-    font-size: 25px;
-    transition: all 0.5s ease;
-  }
-  .checkbox:checked + label:before {
-    transform: translateX(45px) rotate(-270deg);
-  }
+nav a {
+  color: var(--light);
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+nav a:hover {
+  color: var(--secondary);
+  background-color: var(--dark);
+}
+
+
+#submitbtn, #loginbtn {
+  margin-top: 5%;
+  padding: 5%;
   
-  .card-3d-wrap {
-    position: relative;
-    width: 440px;
-    max-width: 100%;
-    height: 400px;
-    transform-style: preserve-3d;
-    perspective: 1500px;
-    
-  }
-  .card-3d-wrapper {
-    width: 100%;
-    height: 100%;
-    position:absolute;    
-    top: 0;
-    left: 0;  
-    transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    transition: all 600ms ease-out; 
-  }
-  .card-front, .card-back {
-    width: 100%;
-    height: 100%;
-    background-color: $Secondarycolor;
-    background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/132.png');
-    background-position: bottom center;
-    background-size: 90%;
-    position: absolute;
-    border-radius: 111px;
-    left: 0;
-    top: 6;
-    transform-style: preserve-3d;
-    transform-style: preserve-3d;
-  }
-  .card-back {
-    transform: rotateY(180deg);
-  }
-  .checkbox:checked ~ .card-3d-wrap .card-3d-wrapper {
-    transform: rotateY(180deg);
-  }
-  .center-wrap{
-    position: absolute;
-    width: 100%;
-    padding: 0 35px;
-    top: 50%;
-    left: 0;
-    transform: translate3d(0, -50%, 35px) perspective(100px);
-    display: block;
-  }
-  
-  .form-group{ 
-    position: relative;
-    display: block;
-      margin: 0;
-      padding: 0;
-  }
-  
-  .form-style {
-    padding: 13px 10px;
-    padding-left: 55px;
-    height: 48px;
-    width: 100%;
-    font-weight: 500;
-    border-radius: 22px;
-    font-size: 14px;
-    line-height: 22px;
-    letter-spacing: 0.5px;
-    color: $Secondarycolor;
-    background-color: $primarycolor;
-    transition: all 200ms linear;
-    box-shadow: 0 4px 8px 0 rgba(21,21,21,.2);
-  }
-  
-  .input-icon {
-    position: absolute;
-    top: 0;
-    left: 18px;
-    height: 48px;
-    font-size: 24px;
-    line-height: 48px;
-    text-align: left;
-    color: $Secondarycolor;
-  }
-  
-  .btn{  
-    border-radius: 4px;
-    height: 44px;
-    font-size: 13px;
-    font-weight: 600;
-    text-transform: uppercase;
-    transition: all 200ms linear;
-    padding: 0 30px;
-    letter-spacing: 1px;
-    display: inline-flex;
-    align-items: center;
-    text-align: center;
-    background-color: $primarycolor;
-    color: $Secondarycolor;
-    box-shadow: 0 8px 24px 0 rgba(255,235,167,.2);
-  }
-  .btn:active,
-  .btn:focus{  
-    background-color: $Secondarycolor;
-    color: $primarycolor;
-    box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
-  }
-  .btn:hover{  
-    background-color: $Secondarycolor;
-    color: $primarycolor;
-    box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
-  }
+}
+
+#logoutbtn {
+  background-color: greenyellow;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+/* CARDS */
+.card {
+  margin: 20px;
+  flex: 0 1 300px;
+  border: 7px double var(--dark);
+  border-radius: 10px;
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+.login-card {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: flex-start;
+  max-width: 75%;
+  padding: 75px;
+  border: 3px solid var(--dark);
+  border-radius: var(--border-radius);
+  border-style: double;
+  border-width: thick;
+  background-image: url(https://i.pinimg.com/originals/6f/c7/34/6fc73482bc62c6b208cc9f8b9cf1c888.jpg);
+  background-repeat: no-repeat;
+  background-size: 110%;
+  color: var(--light);
+  margin-bottom: 2%;
+}
+
+.signup-card {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: flex-start;
+  max-width: 75%;
+  padding: 75px;
+  border: 3px solid var(--dark);
+  border-radius: var(--border-radius);
+  border-style: double;
+  border-width: thick;
+  background-color: #577a7c;
+  color: var(--light);
+}
+
+.card header {
+  color: var(--light);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+  background-color: var(--tertiary);
+  padding: 0.625rem;
+  border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
+}
+
+.card-body {
+  font-size: 1.4rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.random-card {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: flex-start;
+  max-width: 75%;
+  padding: 75px;
+  border: 3px solid var(--dark);
+  border-radius: var(--border-radius);
+  border-style: double;
+  border-width: thick;
+  background-color: #577a7c;
+  color: var(--light);
+}
+
+
+
+/* LAYOUT */
+.container {
+  display: inline-flex;
+  flex-direction: row;
+  align-content: flex-start;
+  align-items: center;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  background: var(--primary);
+  color: var(--light);
+}
+
+#searchbar-favorite {
+  margin-top:150%;
+  margin-bottom: 5%;
+}
+
+.pokemon-cards {
+  justify-content: space-between;
+  border: solid;
+  flex-direction: row;
+  align-content: center;
+}
