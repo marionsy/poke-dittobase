@@ -1,0 +1,26 @@
+{{#if loggedIn}}
+<section class="favorite-Pokemon">
+  <img src="/images/{{.filename}}" alt="{{pokemon.description}}">
+  <div class="myPokemon">
+    <h3>{{myFavoritePokemon.title}}</h3>
+    <div class="row">
+  <div class="column">
+    <div class="pokemon-card1">..</div>
+  </div>
+  <div class="column">
+    <div class="pokemon-card2">..</div>
+  </div>
+  <div class="column">
+    <div class="pokemon-card3">..</div>
+  </div>
+  <div class="column">
+    <div class="pokemon-card4">..</div>
+  </div>
+</div>
+    
+  </div>
+</section>
+<!-- Otherwise, provide a link to login -->
+{{else}}
+<a href="/login">You must login first to see your saved pokemon!</a>
+{{/if}}
