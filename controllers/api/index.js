@@ -4,8 +4,8 @@ const userRoutes = require('./userRoutes');
 const favoriteRoutes = require('./favoriteRoutes');
 const friendRoutes = require('./friendRoutes');
 
-// router.use('/users', userRoutes);
+router.use('/user', userRoutes);
+router.use('/friend', friendRoutes);
 router.use('/favorites', favoriteRoutes);
-// router.use('/friends', friendRoutes);
 
 module.exports = router;
