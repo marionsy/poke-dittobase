@@ -8,7 +8,7 @@ User.hasMany(Favorites, {
 });
 
 User.hasMany(Friend, {
-    foreignKey: 'user_id',
+    foreignKey: 'friend_id',
 });
 
 Favorites.belongsTo(User, {
@@ -16,7 +16,7 @@ Favorites.belongsTo(User, {
 });
 
 Friend.belongsTo(User, {
-    foreignKey: 'user_id',
+    foreignKey: 'friend_id',
 })
 
 
