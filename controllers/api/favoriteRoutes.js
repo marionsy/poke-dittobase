@@ -40,24 +40,24 @@ try {
   }
 });
 
-// // DELETE a location
-// router.delete('/:id', async (req, res) => {
-//   try {
-//     const locationData = await Location.destroy({
-//       where: {
-//         id: req.params.id
-//       }
-//     });
+// DELETE a location
+router.delete('/:id', async (req, res) => {
+  try {
+    const favoriteData = await Favorites.destroy({
+      where: {
+        id: req.params.id
+      }
+    });
 
-//     if (!locationData) {
-//       res.status(404).json({ message: 'No location found with this id!' });
-//       return;
-//     }
+    if (!favoriteData) {
+      res.status(404).json({ message: 'No pokemon found with this id!' });
+      return;
+    }
 
-//     res.status(200).json(locationData);
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
+    res.status(200).json(favoriteData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 module.exports = router;
