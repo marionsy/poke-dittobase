@@ -5,7 +5,12 @@ const router = require('express').Router();
 const friendRoutes = require('./friendRoutes');
 
 // router.use('/users', userRoutes);
+
 // router.use('/favorites', favoriteRoutes);
 router.use('/friend', friendRoutes);
+
+router.use('/favorites', favoriteRoutes);
+// router.use('/friends', friendRoutes);
+
 
 module.exports = router;
