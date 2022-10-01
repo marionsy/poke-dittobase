@@ -1,11 +1,16 @@
 {{#if logged_in}}
 <section class="favorite-Pokemon">
-  <img src="/images/{{.filename}}" alt="{{pokemon.description}}">
+  <img src="{{pokemon.photo}}" alt="{{pokemon.name}}">
   <div class="myPokemon">
-    <h3>{{myFavoritePokemon.title}}</h3>
+    <h1>{{myFavoritePokemon.title}}</h1>
     <div class="row">
   <div class="column">
     <div class="pokemon-card1">..</div>
+      <ul>
+        <li>{{description.pokemon}}</li>
+        <li>{{abilities.pokemon}}</li>
+        <li>{{evolution.pokemon}}</li>
+      </ul>
   </div>
   <div class="column">
     <div class="pokemon-card2">..</div>

@@ -22,6 +22,16 @@
     <!-- Otherwise, show a link to login -->
     <a href="/login">Login</a>
     {{/if}}
+
+    <a href="/">Home</a>
+    <!-- If the user is logged in, show a logout button -->
+    {{#if logged_in}}
+    <button id="logout" class="btn-no-style">Logout</button>
+    {{else}}
+    <!-- Otherwise, show a link to login -->
+    <a href="/login">Login</a>
+    {{/if}}
+
   </nav>
   <main>
     <div >
@@ -65,6 +75,16 @@
         <button id= "submitbtn" class="btn btn-primary" type="submit">signup</button>
     </form>
   </div>
+  <div class="randompokemon-card">
+    <img src="{{pokemon.random.photo}}" alt="Random pokoemon card info" width="auto" height="auto">
+    <h3>{{pokemon.name}}</h3>
+      <ul>
+        <li>{{maininfo.pokemon}}</li>
+        <li>{{description.pokemon}}</li>
+        <li>{{game.pokemon}}</li>
+        {{!-- <li>{{evolution.pokemon}}<a>{{evo1.pokemon}}evolution 1</a></li> ADD pokemon evolutions? --}}
+      </ul>
+  </div>
       {{/unless}}
       {{{body}}}
     </div>
@@ -78,5 +98,7 @@
 <footer>
   
 </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+
 
 </html>
