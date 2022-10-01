@@ -4,90 +4,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Main Page</title>
+  <title>Poke DittoBase</title>
   <link rel="stylesheet" type="text/css" href="/css/jass.css">
   <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 
 <body>
   <header>
-    <h1>Welcome PokeDittoBase!</h1>
+    <h1>Welcome To Poke DittoBase!</h1>
   </header>
   <nav>
-    <a href="/">Home</a>
-    <!-- If the user is logged in, show a logout button -->
     {{#if logged_in}}
-    <button id="logout" class="btn-no-style">Logout</button>
-    {{else}}
-    <!-- Otherwise, show a link to login -->
-    <a href="/login">Login</a>
-    {{/if}}
-
-    <a href="/">Home</a>
+    <a href="/homepage">Home</a>
+    <a href="/favorites">Favorites</a>
+    <a href="/friends">Friends</a>
+    <a href="/logout">Logout</a>
     <!-- If the user is logged in, show a logout button -->
-    {{#if logged_in}}
-    <button id="logout" class="btn-no-style">Logout</button>
-    {{else}}
-    <!-- Otherwise, show a link to login -->
-    <a href="/login">Login</a>
+    {{!-- <button id="logout" class="btn-no-style">Logout</button> --}}
     {{/if}}
-
   </nav>
   <main>
-    <div >
-      {{#unless logged_in}}
-      <div class="row justify-space-between-md">
-<div class="randomloginphoto" <img src="PLACEHOLDER!" alt="Random pokoemon" width="auto" height="auto">        
-  <div class="login-card">
-    <h2 class="page-title">Login</h2>
-    <form class="form login-form">
-      <div class="form-group">
-        <label for="email-login"></label>
-        <input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off">
-        <i class="input-icon uil uil-at"></i>
-      </div>
-     </div> 
-      <div class="form-group">
-        <label for="password-login"></label>
-        <input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off">
-        <i class="input-icon uil uil-lock-alt"></i>
-      </div>
-      <div class="form-group">
-        <button id= "loginbtn" class="btn btn-primary" type="submit">login</button>
-      </div>
-    </form>
-  </div>
-  <div class="signup-card">
-    <h2 class="page-title">Signup</h2>
-    <form class="form signup-form">
-      <div class="form-group">
-        <label for="username-signup"></label>
-        <input type="username" name="username" class="form-style" placeholder="Your Username" id="username" autocomplete="off">
-      </div>
-      <div class="form-group">
-        <label for="email-signup"></label>
-        <input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off">
-      </div>
-      <div class="form-group">
-        <label for="password-signup"></label>
-        <input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off">
-      </div>
-        <button id= "submitbtn" class="btn btn-primary" type="submit">signup</button>
-    </form>
-  </div>
-  <div class="randompokemon-card">
-    <img src="{{pokemon.random.photo}}" alt="Random pokoemon card info" width="auto" height="auto">
-    <h3>{{pokemon.name}}</h3>
-      <ul>
-        <li>{{maininfo.pokemon}}</li>
-        <li>{{description.pokemon}}</li>
-        <li>{{game.pokemon}}</li>
-        {{!-- <li>{{evolution.pokemon}}<a>{{evo1.pokemon}}evolution 1</a></li> ADD pokemon evolutions? --}}
-      </ul>
-  </div>
-      {{/unless}}
-      {{{body}}}
-    </div>
+
+    {{{ body }}}
+
   </main>
   <!-- If the user is logged in, load the JS script for when they logout -->
   {{#if logged_in}}
@@ -96,7 +35,7 @@
 </body>
 
 <footer>
-  
+
 </footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
 
