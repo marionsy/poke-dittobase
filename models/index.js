@@ -1,9 +1,9 @@
 // Import models
 const User = require('./User');
-const Favorites = require('./Favorites');
+const Favorite = require('./Favorite');
 const Friend = require('./Friend');
 
-User.hasMany(Favorites, {
+User.hasMany(Favorite, {
     foreignKey: 'user_id',
 });
 
@@ -11,7 +11,7 @@ User.hasMany(Friend, {
     foreignKey: 'friend_id',
 });
 
-Favorites.belongsTo(User, {
+Favorite.belongsTo(User, {
     foreignKey: 'user_id',
 });
 
@@ -21,4 +21,4 @@ Friend.belongsTo(User, {
 
 
 
-module.exports = { User, Favorites, Friend };
+module.exports = { User, Favorite, Friend };
