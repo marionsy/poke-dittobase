@@ -16,10 +16,10 @@ router.get('/login', (req, res) => {
 router.get('/logout', (req, res) => {
   if (req.session.logged_in) {
     req.session.destroy(() => {
-      res.render('login');
+      res.redirect('/login');
     });
   } else {
-    res.status(404).end();
+    res.redirect('/login');
   }
 });
 
@@ -36,6 +36,9 @@ router.get('/signup', (req, res) => {
 // Get route to homepage
 router.get('/homepage', withAuth, (req, res) => {
   res.render('homepage', {
+    user: {
+      username: req.session.username
+    },
     logged_in: req.session.logged_in
   });
 })
