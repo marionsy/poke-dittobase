@@ -12,9 +12,12 @@ const seedDatabase = async () => {
 
   await sequelize.sync({ force: true });
 
+  await User.bulkCreate(userSeedData, {
+    individualHooks: true,
+    returning: true,
+  });
   await Friend.bulkCreate(friendSeedData);
   await Favorite.bulkCreate(favoriteSeedData);
-  await User.bulkCreate(userSeedData);
 
 
   process.exit(0);
