@@ -1,31 +1,67 @@
-{{#if logged_in}}
 <section class="favorite-Pokemon">
   <img src="{{pokemon.photo}}" alt="{{pokemon.name}}">
   <div class="myPokemon">
-    <h1>{{myFavoritePokemon.title}}</h1>
+    <h1>{{user.id}} Favorite Pokemon! </h1>
     <div class="row">
   <div class="column">
-    <div class="pokemon-card1">..</div>
+    <div class="pokemon-card1">
+      <h3>{{pokemon_name}}</h3>
       <ul>
         <li>{{description.pokemon}}</li>
         <li>{{abilities.pokemon}}</li>
         <li>{{evolution.pokemon}}</li>
       </ul>
+    </div>
   </div>
   <div class="column">
-    <div class="pokemon-card2">..</div>
+    <div class="pokemon-card2">
+      <h3>{{pokemon_name}}</h3>
+      <ul>
+        <li>{{description.pokemon}}</li>
+        <li>{{abilities.pokemon}}</li>
+        <li>{{evolution.pokemon}}</li>
+      </ul>  
+    </div>
   </div>
   <div class="column">
-    <div class="pokemon-card3">..</div>
+    <div class="pokemon-card3">
+      <h3>{{name.pokemon}}</h3>
+      <ul>
+        <li>{{description.pokemon}}</li>
+        <li>{{abilities.pokemon}}</li>
+        <li>{{evolution.pokemon}}</li>
+      </ul>  
+    </div>
   </div>
   <div class="column">
-    <div class="pokemon-card4">..</div>
+    <div class="pokemon-card4">
+      <h3>{{pokemon_name}}</h3>
+      <ul>
+        <li>{{description.pokemon}}</li>
+        <li>{{abilities.pokemon}}</li>
+        <li>{{evolution.pokemon}}</li>
+      </ul>  
+    </div>
   </div>
 </div>
-    
+<div class="column">
+  <div class="pokemon-card5">
+    <h3>{{pokemon_name}}</h3>
+    <ul>
+      <li>{{description.pokemon}}</li>
+      <li>{{abilities.pokemon}}</li>
+      <li>{{evolution.pokemon}}</li>
+    </ul>  
   </div>
+</div>
+  <div class="pokemon-card5">
+    <h3>{{pokemon_name}}</h3>
+    <ul>
+      <li>{{description.pokemon}}</li>
+      <li>{{abilities.pokemon}}</li>
+      <li>{{evolution.pokemon}}</li>
+    </ul>  
+  </div>
+</div>
 </section>
 <!-- Otherwise, provide a link to login -->
-{{else}}
-<p>You must login first to see your saved pokemon!</p>
-{{/if}}
