@@ -1,5 +1,6 @@
 $primarycolor: #FFCB05;
 $Secondarycolor: #3466AF;
+$textcolor: black;
 
 body {
   font-family: Arial;
@@ -8,26 +9,15 @@ body {
   flex-direction: column;
   min-height: 100vh;
   justify-content: flex-start;
-  background-size: 150%;
-  background-repeat: no-repeat;
-  background-position: center;
   background-color: $primarycolor;
 }
 
-a {
-  color: var(--dark);
-  text-decoration: none;
-}
-
-a:visited {
-  color: inherit;
-}
 
 header {
   padding: 40px;
   text-align: center;
-  background: var(--primary);
-  color: var(--light);
+  background: $Secondarycolor;
+  color: black;
 }
 
 main {
@@ -36,21 +26,22 @@ main {
   flex-direction: row;
   justify-content: center;
   margin-top: 2%;
-  background-color: $Secondarycolor;
+  background-color: $primarycolor;
 }
 
 
 nav {
   display: flex;
-  background-color: var(--secondary);
   background-color: $Secondarycolor;
+  justify-content: flex-start;
 }
 
 nav a {
-  color: var(--light);
+  color: $Secondarycolor;
   padding: 14px 20px;
   text-decoration: none;
   text-align: center;
+  justify-content: flex-start;
 }
 
 nav a:hover {
@@ -59,14 +50,25 @@ nav a:hover {
 }
 
 
-#submitbtn, #loginbtn {
+#loginbtn {
   margin-top: 5%;
   padding: 5%;
-  
+  background-color: $primarycolor;
+  color: black;
+  justify-content: center;
+}
+
+#submitbtn {
+  margin-top: 5%;
+  padding: 5%;
+  background-color: $primarycolor;
+  color: black;
+  justify-content: center;
 }
 
 #logoutbtn {
   background-color: $primarycolor;
+  color: black;
 }
 
 img {
@@ -98,7 +100,7 @@ img {
   border-style: double;
   border-width: thick;
   background-color: $Secondarycolor;
-  margin-bottom: 2%;
+  color: var(--light);
 }
 
 .signup-card {
@@ -121,9 +123,12 @@ img {
   font-weight: bold;
   text-transform: uppercase;
   margin: 0;
-  background-color: var(--tertiary);
   padding: 0.625rem;
   border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
+}
+
+.form-style {
+  justify-content: flex-end;
 }
 
 .card-body {
@@ -143,21 +148,21 @@ img {
   border-radius: var(--border-radius);
   border-style: double;
   border-width: thick;
-  background-color: #577a7c;
-  color: var(--light);
+  color: $textcolor;
 }
 
 
 
 /* LAYOUT */
 .container {
-  display: inline-flex;
+   display: inline-flex;
   flex-direction: row;
   align-content: flex-start;
   align-items: center;
 }
 
 footer {
+  margin-bottom: 200;
   padding: 20px;
   text-align: center;
   background: $Secondarycolor;

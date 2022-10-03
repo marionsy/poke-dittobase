@@ -5,26 +5,14 @@ body {
   flex-direction: column;
   min-height: 100vh;
   justify-content: flex-start;
-  /* background-image: url(https://i.pinimg.com/originals/6f/c7/34/6fc73482bc62c6b208cc9f8b9cf1c888.jpg); */
-  background-size: 150%;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-a {
-  color: var(--dark);
-  text-decoration: none;
-}
-
-a:visited {
-  color: inherit;
+  background-color: #FFCB05;
 }
 
 header {
   padding: 40px;
   text-align: center;
-  background: var(--primary);
-  color: var(--light);
+  background: #3466AF;
+  color: black;
 }
 
 main {
@@ -33,18 +21,21 @@ main {
   flex-direction: row;
   justify-content: center;
   margin-top: 2%;
+  background-color: #FFCB05;
 }
 
 nav {
   display: flex;
-  background-color: var(--secondary);
+  background-color: #3466AF;
+  justify-content: flex-start;
 }
 
 nav a {
-  color: var(--light);
+  color: #3466AF;
   padding: 14px 20px;
   text-decoration: none;
   text-align: center;
+  justify-content: flex-start;
 }
 
 nav a:hover {
@@ -52,13 +43,25 @@ nav a:hover {
   background-color: var(--dark);
 }
 
-#submitbtn, #loginbtn {
+#loginbtn {
   margin-top: 5%;
   padding: 5%;
+  background-color: #FFCB05;
+  color: black;
+  justify-content: center;
+}
+
+#submitbtn {
+  margin-top: 5%;
+  padding: 5%;
+  background-color: #FFCB05;
+  color: black;
+  justify-content: center;
 }
 
 #logoutbtn {
-  background-color: greenyellow;
+  background-color: #FFCB05;
+  color: black;
 }
 
 img {
@@ -87,11 +90,8 @@ img {
   border-radius: var(--border-radius);
   border-style: double;
   border-width: thick;
-  background-image: url(https://i.pinimg.com/originals/6f/c7/34/6fc73482bc62c6b208cc9f8b9cf1c888.jpg);
-  background-repeat: no-repeat;
-  background-size: 110%;
+  background-color: #3466AF;
   color: var(--light);
-  margin-bottom: 2%;
 }
 
 .signup-card {
@@ -105,7 +105,7 @@ img {
   border-radius: var(--border-radius);
   border-style: double;
   border-width: thick;
-  background-color: #577a7c;
+  background-color: #3466AF;
   color: var(--light);
 }
 
@@ -114,9 +114,12 @@ img {
   font-weight: bold;
   text-transform: uppercase;
   margin: 0;
-  background-color: var(--tertiary);
   padding: 0.625rem;
   border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
+}
+
+.form-style {
+  justify-content: flex-end;
 }
 
 .card-body {
@@ -136,8 +139,7 @@ img {
   border-radius: var(--border-radius);
   border-style: double;
   border-width: thick;
-  background-color: #577a7c;
-  color: var(--light);
+  color: black;
 }
 
 /* LAYOUT */
@@ -149,10 +151,11 @@ img {
 }
 
 footer {
+  margin-bottom: 200;
   padding: 20px;
   text-align: center;
-  background: var(--primary);
-  color: var(--light);
+  background: #3466AF;
+  color: #FFCB05;
 }
 
 #searchbar-favorite {
@@ -161,8 +164,12 @@ footer {
 }
 
 .pokemon-cards {
+  color: black;
+  background-image: url();
   justify-content: space-between;
   border: solid;
+  border-width: thick;
   flex-direction: row;
   align-content: center;
+  border-radius: 10px;
 }/*# sourceMappingURL=style.css.map */
