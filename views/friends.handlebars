@@ -1,1 +1,11 @@
-Hi friends
+<section class="friends">
+
+  {{#each friends as |friend| }}
+  <div class="friend">
+    <h2 friend-name={{friend.username}}>{{friend.username}}</h2>
+  </div>
+  {{/each}}
+
+</section>
+
+<script src="/js/view-friend.js"></script>

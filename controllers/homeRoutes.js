@@ -30,7 +30,7 @@ router.get('/signup', (req, res) => {
     res.redirect('/homepage');
     return;
   }
-  
+
   res.render('signup');
 });
 
@@ -59,12 +59,12 @@ router.get('/search/pokemon/:pokemon', withAuth, async (req, res) => {
 router.get('/favorites', withAuth, async (req, res) => {
   const favorites = await Favorite.findAll({
     where: {
-         user_id: req.session.user_id
+      user_id: req.session.user_id
     }
-   });
+  });
 
   const favoritePokemon = await Promise.all(favorites.map(async pokemon => {
-    return await getPokemonData(pokemon.pokemon_name) 
+    return await getPokemonData(pokemon.pokemon_name)
   }));
 
   res.render('favorites-page', {
@@ -73,11 +73,52 @@ router.get('/favorites', withAuth, async (req, res) => {
   });
 })
 
-router.get('/friends', withAuth, (req, res) => {
+// Get route to view friends
+router.get('/friends', async (req, res) => {
+  const friendsData = await Friend.findAll({
+    where: {
+      user_id: req.session.user_id
+    },
+    include: [{ model: User }]
+  });
+
+  const friends = friendsData.map(friend => {
+    return {
+      username: friend.user.username
+    }
+  });
+
   res.render('friends', {
+    friends,
     logged_in: req.session.logged_in
   });
-})
+});
+
+// Get route to individual friend's favorites
+router.get('/friends/:username', async (req, res) => {
+  const friendUserData = await User.findOne({
+    where: {
+      username: req.params.username
+    }
+  });
+
+  const friendFavorites = await Favorite.findAll({
+    where: {
+      user_id: friendUserData.id
+    }
+  });
+
+  const favoritePokemon = await Promise.all(friendFavorites.map(async pokemon => {
+    return await getPokemonData(pokemon.pokemon_name)
+  }));
+
+  // TODO create friends-favorites.handlebars
+  res.render('favorites-page', {
+    favoritePokemon,
+    friend_username: req.params.username,
+    logged_in: req.session.logged_in
+  });
+});
 
 // Catch all page for any n/a route
 router.get('/*', (req, res) => {
@@ -85,7 +126,7 @@ router.get('/*', (req, res) => {
     res.redirect('/homepage');
     return;
   }
-  
+
   res.redirect('login');
 })
 
