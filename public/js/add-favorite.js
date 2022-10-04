@@ -12,7 +12,7 @@ const favorite = async () => {
     });
   
     if (response.ok) {
-      document.location.replace('/favorites');
+      document.location.replace('/homepage');
     } else {
       alert(response.statusText);
     }

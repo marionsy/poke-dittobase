@@ -2,21 +2,6 @@ const router = require('express').Router();
 const { Favorite } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-// GET all favorites
-router.get('/', withAuth, async (req, res) => {
-  try {
-    const favorites = await Favorite.findAll({
-     where: {
-          user_id: req.session.user_id
-        },
-        include: [{ model: User }]
-    });
-    res.status(200).json(favorites);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
 // CREATE a favorite
 router.post('/', withAuth, async (req, res) => {
 try {
@@ -33,11 +18,12 @@ try {
 });
 
 // DELETE a favorite
-router.delete('/:id', withAuth, async (req, res) => {
+router.delete('/:pokemon', withAuth, async (req, res) => {
   try {
     const favoriteData = await Favorite.destroy({
       where: {
-        id: req.params.id
+        pokemon_name: req.params.pokemon,
+        user_id: req.session.user_id
       }
     });
 

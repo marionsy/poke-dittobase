@@ -1,6 +1,8 @@
 <section class="favorite-Pokemon">
   <img src="{{pokemon.photo}}" alt="{{pokemon.name}}">
 
+  {{#if favoritePokemon.length}}
+
   {{#each favoritePokemon as |pokemon| }}
   <div>
     <h2>{{pokemon.name}}</h2>
@@ -11,29 +13,14 @@
     <h3>Abilities: {{pokemon.ability}}</h3>
     <h3>Original Game: {{pokemon.game}}</h3>
 
+    <button class="delete-from-favorites" pokemon-name={{pokemon.name}}>Delete from favorites</button>
+
   </div>
   {{/each}}
-  {{!-- <div class="myPokemon">
-    <h1>{{myFavoritePokemon.title}}</h1>
-    <div class="row">
-      <div class="column">
-        <div class="pokemon-card1">..</div>
-        <ul>
-          <li>{{description.pokemon}}</li>
-          <li>{{abilities.pokemon}}</li>
-          <li>{{evolution.pokemon}}</li>
-        </ul>
-      </div>
-      <div class="column">
-        <div class="pokemon-card2">..</div>
-      </div>
-      <div class="column">
-        <div class="pokemon-card3">..</div>
-      </div>
-      <div class="column">
-        <div class="pokemon-card4">..</div>
-      </div>
-    </div>
+  {{else}}
+  <h3>Search for a pokemon to add to your favorites!</h3>
+  {{/if}}
 
-  </div> --}}
 </section>
+
+<script src="/js/delete-favorite.js"></script>
