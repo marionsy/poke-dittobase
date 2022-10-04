@@ -2,6 +2,11 @@
 
 <div>
   <img src={{getRandomPokemonImage}} alt="Random pokemon" width="auto" height="auto">
-  <input type="text" placeholder="Search for your Pokemon!..">
+  <input id="search-text" type="text" placeholder="Search for your Pokemon!..">
   <button class="searchbtn">FIND POKEMON!</button>
 </div>
+
+{{!-- TODO update --}}
+<div id="error-text" hidden>No pokemon found!</div>
+
+<script src="/js/search.js"></script>
