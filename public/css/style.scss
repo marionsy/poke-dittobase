@@ -1,5 +1,6 @@
 $primarycolor: #FFCB05;
 $Secondarycolor: #3466AF;
+$font: black;
 
 body {
   font-family: Arial;
@@ -8,14 +9,12 @@ body {
   flex-direction: column;
   min-height: 100vh;
   justify-content: flex-start;
-  /* background-image: url(https://i.pinimg.com/originals/6f/c7/34/6fc73482bc62c6b208cc9f8b9cf1c888.jpg); */
   background-size: 150%;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: $primarycolor;
 }
 
 a {
-  color: var(--dark);
+  color: $font;
   text-decoration: none;
 }
 
@@ -26,8 +25,8 @@ a:visited {
 header {
   padding: 40px;
   text-align: center;
-  background: var(--primary);
-  color: var(--light);
+  background: $Secondarycolor;
+  color: $font;
 }
 
 main {
@@ -41,13 +40,12 @@ main {
 
 nav {
   display: flex;
-  background-color: var(--secondary);
+  background-color: $Secondarycolor;
 }
 
 nav a {
-  color: var(--light);
+  color: $font;
   padding: 14px 20px;
-  text-decoration: none;
   text-align: center;
 }
 
@@ -57,14 +55,24 @@ nav a:hover {
 }
 
 
-#submitbtn, #loginbtn {
+#submitbtn {
   margin-top: 5%;
   padding: 5%;
+  background-color: $primarycolor;
+  color: $font; 
+}
+
+#loginbtn {
+  margin-top: 5%;
+  padding: 5%;
+  background-color: $primarycolor;
+  color: $font;
+  margin-left: 45%;
   
 }
 
 #logoutbtn {
-  background-color: greenyellow;
+  background-color: $Secondarycolor;
 }
 
 img {
@@ -86,20 +94,15 @@ img {
 
 .login-card {
   display: flex;
-  align-items: flex-start;
-  flex-direction: row;
-  justify-content: flex-start;
   max-width: 75%;
   padding: 75px;
   border: 3px solid var(--dark);
   border-radius: var(--border-radius);
   border-style: double;
   border-width: thick;
-  background-image: url(https://i.pinimg.com/originals/6f/c7/34/6fc73482bc62c6b208cc9f8b9cf1c888.jpg);
-  background-repeat: no-repeat;
-  background-size: 110%;
-  color: var(--light);
+  color: $font;
   margin-bottom: 2%;
+  background-color: $Secondarycolor;
 }
 
 .signup-card {
@@ -113,8 +116,8 @@ img {
   border-radius: var(--border-radius);
   border-style: double;
   border-width: thick;
-  background-color: #577a7c;
-  color: var(--light);
+  background-color: $Secondarycolor;
+  color: $font;
 }
 
 .card header {
@@ -144,8 +147,8 @@ img {
   border-radius: var(--border-radius);
   border-style: double;
   border-width: thick;
-  background-color: #577a7c;
-  color: var(--light);
+  background-color: $Secondarycolor;
+  color: $font;
 }
 
 
@@ -161,13 +164,14 @@ img {
 footer {
   padding: 20px;
   text-align: center;
-  background: var(--primary);
-  color: var(--light);
+  background: $Secondarycolor;
+  color: $font;
 }
 
 #searchbar-favorite {
   margin-top:150%;
   margin-bottom: 5%;
+  justify-content: center;
 }
 
 .pokemon-cards {
