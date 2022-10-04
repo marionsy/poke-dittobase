@@ -22,7 +22,7 @@ header {
   padding: 40px;
   text-align: center;
   background: #3466AF;
-  color: black;
+  color: #FFCB05;
 }
 
 main {
@@ -36,6 +36,8 @@ main {
 nav {
   display: flex;
   background-color: #3466AF;
+  justify-content: CENTER;
+  color: #FFCB05;
 }
 
 nav a {
@@ -61,7 +63,7 @@ nav a:hover {
   padding: 5%;
   background-color: #FFCB05;
   color: black;
-  margin-left: 45%;
+  text-align: center;
 }
 
 #logoutbtn {
@@ -85,15 +87,19 @@ img {
 
 .login-card {
   display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
   max-width: 75%;
   padding: 75px;
   border: 3px solid var(--dark);
   border-radius: var(--border-radius);
   border-style: double;
   border-width: thick;
-  color: black;
-  margin-bottom: 2%;
   background-color: #3466AF;
+  color: black;
+  text-align: center;
+  margin-top: 75%;
 }
 
 .signup-card {
@@ -109,6 +115,8 @@ img {
   border-width: thick;
   background-color: #3466AF;
   color: black;
+  text-align: center;
+  margin-top: 75%;
 }
 
 .card header {
@@ -152,15 +160,20 @@ img {
 
 footer {
   padding: 20px;
+  width: 100%;
   text-align: center;
   background: #3466AF;
   color: black;
+  position: fixed;
+  bottom: 0;
 }
 
-#searchbar-favorite {
-  margin-top: 150%;
-  margin-bottom: 5%;
+.searchbar {
   justify-content: center;
+  bottom: 18%;
+  position: fixed;
+  width: 35%;
+  height: 35%;
 }
 
 .pokemon-cards {
@@ -168,4 +181,37 @@ footer {
   border: solid;
   flex-direction: row;
   align-content: center;
+}
+
+#login-random-pokemon {
+  left: 0;
+  position: fixed;
+  transform: scaleX(-1);
+}
+
+#login-random-pokemon2 {
+  right: 0;
+  position: fixed;
+}
+
+.page-title {
+  text-align: center;
+  margin-top: -15%;
+}
+
+#login-random-pokemon3 {
+  left: 0;
+  position: fixed;
+  bottom: 25px;
+}
+
+#login-random-pokemon4 {
+  right: 0;
+  position: fixed;
+  bottom: 25px;
+}
+
+.signup-title {
+  text-align: center;
+  padding-left: 10%;
 }/*# sourceMappingURL=style.css.map */

@@ -6,20 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Poke DittoBase</title>
   <link rel="stylesheet" type="text/css" href="/css/style.css">
-   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
   
 </head>
 
 <body>
   <header>
-    <h1>Welcome To Poke DittoBase!</h1>
+    <h1>The Poke DittoBase!</h1>
   </header>
   <nav>
     {{#if logged_in}}
-    <a href="/homepage"><i class="fa-solid fa-house">Home</a></i>
-    <a href="/favorites">Favorites</a>
-    <a href="/friends">Friends</a>
-    <a href="/logout">Logout</a>
+    <a href="/homepage"><i class="fa-solid fa-house"> Home</a></i>
+    <a href="/favorites"><i class="fa-solid fa-heart"> Favorites</a></i>
+    <a href="/friends"><i class="fa-solid fa-user-group"> Friends</a></i>
+    <a href="/logout"><i class="fa-solid fa-door-open"> Logout</a></i>
     <!-- If the user is logged in, show a logout button -->
     {{!-- <button id="logout" class="btn-no-style">Logout</button> --}}
     {{/if}}

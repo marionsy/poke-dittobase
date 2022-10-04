@@ -12,11 +12,12 @@ As a user I want to be able to create/login to the site and have it let me save 
 ## Software
 - node.js
 - mysql2
-- express.js(handlebars, session, fontawesome-free)
+- express.js(handlebars, session)
 - sequelize
 - dotenv
 - bcrypt
 - Sass
+- font-awesome(icons)
 ## Installation
 Step 1 - npm install
 Step 2 - login to mysql and source the database
