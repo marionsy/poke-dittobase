@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { User, Favorite, Friend } = require('../models');
 const withAuth = require('../utils/auth');
+const getPokemonData = require('../utils/pokemon');
 
 // Get route to login
 router.get('/login', (req, res) => {
@@ -43,9 +44,31 @@ router.get('/homepage', withAuth, (req, res) => {
   });
 })
 
+
+// Get route to load the search results page
+router.get('/search/pokemon/:pokemon', withAuth, async (req, res) => {
+  const pokemon = await getPokemonData(req.params.pokemon);
+
+  res.render('search-results', {
+    pokemon,
+    logged_in: req.session.logged_in
+  });
+})
+
 // Get route to homepage
-router.get('/favorites', withAuth, (req, res) => {
+router.get('/favorites', withAuth, async (req, res) => {
+  const favorites = await Favorite.findAll({
+    where: {
+         user_id: req.session.user_id
+    }
+   });
+
+  const favoritePokemon = await Promise.all(favorites.map(async pokemon => {
+    return await getPokemonData(pokemon.pokemon_name) 
+  }));
+
   res.render('favorites-page', {
+    favoritePokemon,
     logged_in: req.session.logged_in
   });
 })

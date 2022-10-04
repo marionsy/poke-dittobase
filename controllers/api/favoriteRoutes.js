@@ -2,8 +2,6 @@ const router = require('express').Router();
 const { Favorite } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-// will add withAuth afer login is created
-
 // GET all favorites
 router.get('/', withAuth, async (req, res) => {
   try {
@@ -23,10 +21,12 @@ router.get('/', withAuth, async (req, res) => {
 router.post('/', withAuth, async (req, res) => {
 try {
   const newFavorite = {
-    user_id: req.session.user_id
+    user_id: req.session.user_id,
+    pokemon_name: req.body.pokemon_name,
+    nickname: req.body.nickname
   }
-  const favorite = await Favorite.create(req.body);
-    res.status(200).json(newFavorite);
+  const favorite = await Favorite.create(newFavorite);
+  res.status(200).json(favorite);
   } catch (err) {
     res.status(400).json(err);
   }
