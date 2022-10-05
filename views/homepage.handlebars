@@ -1,16 +1,16 @@
-<h2> Welcome {{user.username}} </h2>
+<div class="homepage">
+<h2 class="homepagetitle"> Welcome {{user.username}} </h2>
 
-<div>
+<div class="homepageimage">
   <img src={{getRandomPokemonImage}} alt="Random pokemon" width="auto" height="auto">
   </div>
 <div class="searchbar">
   <input id="search-text" type="text" placeholder="Search for your Pokemon!..">
-  <i class="fa-solid fa-magnifying-glass"></i>
   <div>
   <button class="searchbtn">FIND POKEMON!</button>
 <div>
 </div>
 {{!-- TODO update --}}
 <div id="error-text" hidden>No pokemon found!</div>
-
+</div>
 <script src="/js/search.js"></script>
