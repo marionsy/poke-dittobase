@@ -43,4 +43,6 @@ Step 5 - Navigate to localhost:3001/login to access PokeDittoBase
 
 ## Link to deployed heroku application:
 
+https://pokedittobase.herokuapp.com/
+
 
