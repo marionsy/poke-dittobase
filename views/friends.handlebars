@@ -1,11 +1,30 @@
 <section class="friends">
 
+  {{#if friends.length}}
   {{#each friends as |friend| }}
   <div class="friend">
-    <h2 friend-name={{friend.username}}>{{friend.username}}</h2>
+    <h2>{{friend.username}}</h2>
+    <button class="view-friend" friend-name={{friend.username}}>VIEW FRIEND</button>
+    <button class="delete-friend" friend-id={{friend.id}}>DELETE FRIEND</button>
   </div>
   {{/each}}
+  {{else}}
+  <h2>wow, much empty :(</h2>
+  {{/if}}
+
+  <br>
+
+<div>
+  <input id="search-text" type="text" placeholder="Search for your Friends!">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <div>
+    <button class="searchbtn">FIND FRIEND!</button>
+  </div>
+  <h2 class="error-text" hidden="true">No user found!</h2>
+</div>
 
 </section>
 
 <script src="/js/view-friend.js"></script>
+<script src="/js/search-friend.js"></script>
+<script src="/js/delete-friend.js"></script>

@@ -1,4 +1,4 @@
-{{#if pokemon.found}}
+{{#if pokemon}}
 <h2>{{pokemon.name}}</h2>
 
 <img id="pokemon-image" src={{pokemon.image}} alt={{pokemon.name}}>
@@ -7,7 +7,7 @@
 <h3>Abilities: {{pokemon.ability}}</h3>
 <h3>Original Game: {{pokemon.game}}</h3>
 
-<button id="add-to-favorites">Add to favorites</button>
+<button class="add-to-favorites" pokemon-name={{pokemon.name}}>Add to favorites</button>
 {{else}}
 <h3>Couldn't find anything :(</h3>
 {{/if}}

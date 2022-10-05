@@ -3,5 +3,5 @@ const viewFriend = async (event) => {
   document.location.replace('/friends/' + friendName);
 }
 
-let elements = document.getElementsByClassName("friend");
+let elements = document.getElementsByClassName("view-friend");
 Array.from(elements).forEach(element => element.addEventListener('click', viewFriend));
