@@ -1,29 +1,26 @@
-<section class="friends">
-
-  {{#if friends.length}}
-  {{#each friends as |friend| }}
-  <div class="friend">
-    <h2>{{friend.username}}</h2>
-    <button class="view-friend" friend-name={{friend.username}}>VIEW FRIEND</button>
-    <button class="delete-friend" friend-id={{friend.id}}>DELETE FRIEND</button>
-  </div>
-  {{/each}}
-  {{else}}
-  <h2>wow, much empty :(</h2>
-  {{/if}}
-
-  <br>
-
-<div>
-  <input id="search-text" type="text" placeholder="Search for your Friends!">
-  <i class="fa-solid fa-magnifying-glass"></i>
-  <div>
-    <button class="searchbtn">FIND FRIEND!</button>
+<div class="input-group mb-3 w-50 p-3 mx-auto">
+  <input type="text" id="search-text" class="form-control" placeholder="Search for your Friends!"
+    aria-label="Search for your Pokemon!.." aria-describedby="basic-addon2">
+  <div class="input-group-append">
+    <button class="btn btn-outline-secondary searchbtn" type="button"><i class="fa-solid fa-magnifying-glass"> Find
+        friend!</i></button>
   </div>
   <h2 class="error-text" hidden="true">No user found!</h2>
 </div>
 
-</section>
+{{#if friends.length}}
+<div class="container text-center">
+  <div class="row">
+    {{#each friends as |friend| }}
+    {{> friend-card}}
+    {{/each}}
+  </div>
+</div>
+{{else}}
+
+{{!-- TODO add error message if no friends --}}
+{{/if}}
+
 
 <script src="/js/view-friend.js"></script>
 <script src="/js/search-friend.js"></script>

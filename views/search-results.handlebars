@@ -1,13 +1,25 @@
 {{#if pokemon}}
-<h2>{{pokemon.name}}</h2>
-
-<img id="pokemon-image" src={{pokemon.image}} alt={{pokemon.name}}>
-
-<h3>Decription: {{pokemon.description}}</h3>
-<h3>Abilities: {{pokemon.ability}}</h3>
-<h3>Original Game: {{pokemon.game}}</h3>
-
-<button class="add-to-favorites" pokemon-name={{pokemon.name}}>Add to favorites</button>
+<div class="container text-center">
+  <div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+      <div class="card" style="width: 25rem;">
+        <img src={{pokemon.image}} class="card-img-top" alt={{pokemon.name}}>
+        <div class="card-body">
+          <h5 class="card-title">{{pokemon.name}}</h5>
+          <p class="card-text">{{pokemon.description}}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Ability: {{pokemon.ability}}</li>
+          <li class="list-group-item">Original Game: {{pokemon.game}}</li>
+        </ul>
+        <div class="card-body">
+          <a href="#" class="card-link add-to-favorites" pokemon-name={{pokemon.name}}>Add to favorites</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {{else}}
 <h3>Couldn't find anything :(</h3>
 {{/if}}

@@ -1,31 +1,25 @@
-<section class="favorite-Pokemon">
-  <h1>{{friend_username}}'s Favorite Pokemon</h1>
-
-  {{#unless is_friend}}
-    <button friend-id={{friend_id}} class="add-friend">Add Friend!</button>
-  {{/unless}}
-
-  {{#if favoritePokemon.length}}
-
-    {{#each favoritePokemon as |pokemon| }}
-    <div>
-      <h2>{{pokemon.name}}</h2>
-
-      <img id="pokemon-image" src={{pokemon.image}} alt={{pokemon.name}}>
-
-      <h3>Decription: {{pokemon.description}}</h3>
-      <h3>Abilities: {{pokemon.ability}}</h3>
-      <h3>Original Game: {{pokemon.game}}</h3>
-
-      <button class="add-to-favorites" pokemon-name={{pokemon.name}}>Add to favorites</button>
-
+<div class="jumbotron jumbotron-fuid">
+  <div class="container">
+    <h1 class="display-4 text-center">{{friend_username}}'s Favorite Pokemon</h1>
+    <div class="d-flex justify-content-center">
+      {{#unless is_friend}}
+      <a class="btn btn-primary btn-lg add-friend" friend-id={{friend_id}} href="#" role="button">Add Friend</a>
+      {{/unless}}
     </div>
-    {{/each}}
-  {{else}}
-    <h3>This person hasn't added any favorites yet!</h3>
-  {{/if}}
+  </div>
+</div>
 
-</section>
+{{#if favoritePokemon.length}}
+<div class="container text-center">
+  <div class="row">
+    {{#each favoritePokemon as |pokemon| }}
+    {{> unfavorited-pokemon-card}}
+    {{/each}}
+  </div>
+</div>
+{{else}}
+<h3>This person hasn't added any favorites yet!</h3>
+{{/if}}
 
 <script src="/js/add-favorite.js"></script>
 <script src="/js/add-friend.js"></script>
