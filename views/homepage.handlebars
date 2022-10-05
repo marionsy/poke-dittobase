@@ -1,7 +1,7 @@
-<div class="homepage">
+<div class="columns is-centered">
 <h2 class="homepagetitle"> Welcome {{user.username}} </h2>
 
-<div class="homepageimage">
+<div class="column">
   <img src={{getRandomPokemonImage}} alt="Random pokemon" width="auto" height="auto">
   </div>
 <div class="searchbar">
@@ -13,4 +13,5 @@
 {{!-- TODO update --}}
 <div id="error-text" hidden>No pokemon found!</div>
 </div>
+
 <script src="/js/search.js"></script>

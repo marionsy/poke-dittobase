@@ -161,7 +161,7 @@ img {
 
 /* LAYOUT */
 .container {
-  display: inline-flex;
+  display: flex;
   flex-direction: row;
   align-content: center;
   align-items: center;
@@ -181,13 +181,17 @@ footer {
 .searchbar {
   justify-content: center;
   width: 15%;
-  align-items: center;
-  align-content: center;
+  align-content: flex-end;
 }
 
 #search-text {
-  width: 4%;
-  height: 3%;
+  width: 50%;
+  height: 20%;
+  align-content: flex-end;
+  top: 50%;
+  bottom: 50%;
+  right: 50%;
+  left: 50%;
 }
 
 .pokemon-cards {
@@ -237,9 +241,10 @@ footer {
 }
 
 .homepageimage {
-  display: flex;
-  place-content: center;
-  margin: 50%;
+  top: 50%;
+  bottom: 50%;
+  right: 50%;
+  left: 50%;
 }
 
 .homepagetitle {
@@ -268,6 +273,9 @@ footer {
   margin-right: 450%;
 }
 
-.favorite-pokemon {
-  border: solid;
+.card {
+  size: 1rem;
+  margin-right: 10%;
+  margin-top: 50%;
+  background-color: #3466AF;
 }/*# sourceMappingURL=style.css.map */
