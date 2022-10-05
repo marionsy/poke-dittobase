@@ -2,8 +2,6 @@ const router = require('express').Router();
 const { User, Friend } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-// will add withAuth after login is created
-
 // Get all friends
 router.get('/', withAuth, async (req, res) => {
   try {
@@ -57,7 +55,8 @@ router.delete('/:id', withAuth, async (req, res) => {
   try {
     const friendData = await Friend.destroy({
       where: {
-        id: req.params.id
+        user_id: req.session.user_id,
+        friend_id: req.params.id
       }
     });
 
