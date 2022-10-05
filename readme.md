@@ -1,23 +1,33 @@
-## Pokedittobase
+# Poke Dittobase
+
 ## Table of Contents
-- [Pokedittobase](#pokedittobase)
 - [Table of Contents](#table-of-contents)
 - [User Story](#user-story)
-- [Software](#software)
+- [Features](#features)
 - [Installation](#installation)
 - [Contribution](#contribution)
 - [Questions](#questions)
+
 ## User Story
-As a user I want to be able to create/login to the site and have it let me save what pokemon I have caught along with being able to see what their starting stats will be. As well as what games they can found in. 
-## Software
-- node.js
-- mysql2
-- express.js(handlebars, session)
-- sequelize
-- dotenv
-- bcrypt
-- Sass
-- font-awesome(icons)
+ * As a user,
+ * I want to be able to create an account and search for my favorite pokemon
+ * So that I can save them to my favorite pokemon list and compare with friends
+
+## Features
+ * Javascript
+ * Node.js
+ * npm
+ * Express.js
+    * handlebars
+    * session
+ * MYSQL2
+ * Sequelize
+ * dotenv
+ * bcrypt
+ * Pokemon promise v2
+ * Sass
+ * Font-awesome
+
 ## Installation
 Step 1 - npm install
 Step 2 - login to mysql and source the database
@@ -27,8 +37,10 @@ Step 5 - Navigate to localhost:3001/login to access PokeDittoBase
 
 
 ## Contribution
-https://www.github.com/Aslaviero
-https://github.com/marionsy
-https://github.com/Sharon-Lamanda
+ * https://www.github.com/Aslaviero
+ * https://github.com/marionsy
+ * https://github.com/Sharon-Lamanda
 
-## Questions
+## Link to deployed heroku application:
+
+
