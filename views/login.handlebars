@@ -1,17 +1,15 @@
 <div>
-  <img id="login-random-pokemon" src={{getRandomPokemonImage}} alt="random pokemon" width="400" height="500">
-  <img id="login-random-pokemon2" src={{getRandomPokemonImage}} alt="random pokemon" width="400" height="500">
-  <img id="login-random-pokemon3" src={{getRandomPokemonImage}} alt="random pokemon" width="400" height="500">
-  <img id="login-random-pokemon4" src={{getRandomPokemonImage}} alt="random pokemon" width="400" height="500">
+  <img id="login-random-pokemon" src={{getRandomPokemonImage}} alt="random pokemon" width="300" height="300">
+  <img id="login-random-pokemon2" src={{getRandomPokemonImage}} alt="random pokemon" width="300" height="300">
+  <img id="login-random-pokemon3" src={{getRandomPokemonImage}} alt="random pokemon" width="300" height="300">
+  <img id="login-random-pokemon4" src={{getRandomPokemonImage}} alt="random pokemon" width="300" height="300">
 </div>
-
-
-<div>
-  <div class="row justify-space-between-md">
+    <div class="container">
       <div class="login-card"> 
+        <h2 class="page-title">Login</h2>
         <form class="form login-form">
-          <h2 class="page-title">Login</h2>
           <div class="form-group">
+            </div>
             <label for="email-login"></label>
             <i class="fa-solid fa-envelope"></i>
             <input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail"
@@ -23,11 +21,10 @@
             
           </div>
           <button id="loginbtn" class="btn btn-primary" type="submit">login</button>
-          <a href="/signup"> Sign up! </a>
+          <a class="signup" href="/signup"> Sign up! </a>
         </form>
       </div>
-    </div>
-  </div>
-</div>
+   </div>
+
 
 <script src="/js/login.js"></script>

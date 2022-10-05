@@ -24,11 +24,11 @@
     {{!-- <button id="logout" class="btn-no-style">Logout</button> --}}
     {{/if}}
   </nav>
-  <main>
-
+  
+<main>
     {{{ body }}}
-
-  </main>
+</main>
+  
   <!-- If the user is logged in, load the JS script for when they logout -->
   {{#if logged_in}}
   <script src="/js/logout.js"></script>

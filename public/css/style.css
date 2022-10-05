@@ -1,12 +1,14 @@
 body {
   font-family: Arial;
   margin: 0;
-  display: flex;
-  flex-direction: column;
   min-height: 100vh;
-  justify-content: flex-start;
-  background-size: 150%;
   background-color: #FFCB05;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 a {
@@ -19,18 +21,16 @@ a:visited {
 }
 
 header {
-  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 4px;
   text-align: center;
   background: #3466AF;
   color: #FFCB05;
-}
-
-main {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: row;
+  position: fixed;
+  top: 0;
+  width: 100%;
   justify-content: center;
-  margin-top: 2%;
 }
 
 nav {
@@ -38,6 +38,9 @@ nav {
   background-color: #3466AF;
   justify-content: CENTER;
   color: #FFCB05;
+  margin-top: 5%;
+  position: fixed;
+  width: 100%;
 }
 
 nav a {
@@ -59,11 +62,17 @@ nav a:hover {
 }
 
 #loginbtn {
-  margin-top: 5%;
-  padding: 5%;
+  margin-top: -19%;
+  padding: 2%;
   background-color: #FFCB05;
   color: black;
+  margin-left: 30%;
   text-align: center;
+}
+
+.signup {
+  margin-top: -20%;
+  color: #FFCB05;
 }
 
 #logoutbtn {
@@ -71,7 +80,7 @@ nav a:hover {
 }
 
 img {
-  max-width: 100%;
+  max-width: auto;
   height: auto;
 }
 
@@ -88,7 +97,7 @@ img {
 .login-card {
   display: flex;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   max-width: 75%;
   padding: 75px;
@@ -97,16 +106,16 @@ img {
   border-style: double;
   border-width: thick;
   background-color: #3466AF;
-  color: black;
+  color: #FFCB05;
   text-align: center;
-  margin-top: 75%;
+  margin-top: 55%;
 }
 
 .signup-card {
   display: flex;
-  align-items: flex-start;
-  flex-direction: row;
-  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   max-width: 75%;
   padding: 75px;
   border: 3px solid var(--dark);
@@ -114,7 +123,7 @@ img {
   border-style: double;
   border-width: thick;
   background-color: #3466AF;
-  color: black;
+  color: #FFCB05;
   text-align: center;
   margin-top: 75%;
 }
@@ -154,8 +163,9 @@ img {
 .container {
   display: inline-flex;
   flex-direction: row;
-  align-content: flex-start;
+  align-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 footer {
@@ -170,10 +180,14 @@ footer {
 
 .searchbar {
   justify-content: center;
-  bottom: 18%;
-  position: fixed;
-  width: 35%;
-  height: 35%;
+  width: 15%;
+  align-items: center;
+  align-content: center;
+}
+
+#search-text {
+  width: 4%;
+  height: 3%;
 }
 
 .pokemon-cards {
@@ -214,4 +228,46 @@ footer {
 .signup-title {
   text-align: center;
   padding-left: 10%;
+}
+
+.homepage {
+  display: flex;
+  justify-content: center;
+  place-content: center;
+}
+
+.homepageimage {
+  display: flex;
+  place-content: center;
+  margin: 50%;
+}
+
+.homepagetitle {
+  margin: 30%;
+  order: 0;
+  place-content: center;
+}
+
+.friendspage {
+  display: flex;
+  margin-top: 10%;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.friendspage > div {
+  background-color: #3466AF;
+  font-size: large;
+  justify-content: center;
+  margin: 30px;
+  padding: 30px;
+  width: 300%;
+  align-items: center;
+  margin-right: 450%;
+}
+
+.favorite-pokemon {
+  border: solid;
 }/*# sourceMappingURL=style.css.map */
