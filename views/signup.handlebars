@@ -1,29 +1,30 @@
-<div>
-  <img id="login-random-pokemon" src={{getRandomPokemonImage}} alt="random pokemon" width="400" height="500">
-  <img id="login-random-pokemon2" src={{getRandomPokemonImage}} alt="random pokemon" width="400" height="500">
-  <img id="login-random-pokemon3" src={{getRandomPokemonImage}} alt="random pokemon" width="400" height="500">
-  <img id="login-random-pokemon4" src={{getRandomPokemonImage}} alt="random pokemon" width="400" height="500">
-</div>
 <div class="container">
-<div class="signup-card">
-  <h2 class="page-title">Signup</h2>
-  <form class="form signup-form">
-    <div class="form-group">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <div class="card my-5">
+        <form class="card-body cardbody-color p-lg-5 signup-form">
+          <div class="text-center">
+            <img src={{getRandomPokemonImage}} class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3"
+              width="250px" alt="profile">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="username">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" id="logemail" aria-describedby="emailHelp" placeholder="email">
+          </div>
+          <div class="mb-3">
+            <input type="password" class="form-control" id="logpass" placeholder="password">
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-color px-5 mb-5 w-100 loginbtn">Create Account</button>
+          </div>
+          <div id="emailHelp" class="form-text text-center mb-5 text-dark">Already have an account? <a href="/login" class="text-dark fw-bold"> Login</a>
+          </div>
+        </form>
+      </div>
     </div>
-    <div class="form-group">
-      <label for="username-signup"></label>
-      <input type="username" name="username" class="form-style" placeholder="Your Username" id="logusername" autocomplete="off">
-    </div>
-    <div class="form-group">
-      <label for="email-signup"></label>
-      <input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off">
-    </div>
-    <div class="form-group">
-      <label for="password-signup"></label>
-      <input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass"
-        autocomplete="off">
-    </div>
-    <button id="submitbtn" class="btn btn-primary" type="submit">signup</button>
-  </form>
+  </div>
 </div>
-</div>
+
+<script src="/js/signup.js"></script>

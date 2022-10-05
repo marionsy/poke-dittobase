@@ -69,6 +69,7 @@ router.get('/favorites', withAuth, async (req, res) => {
 
   res.render('favorites-page', {
     favoritePokemon,
+    username: req.session.username,
     logged_in: req.session.logged_in
   });
 })
