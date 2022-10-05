@@ -1,9 +1,11 @@
-<div class="friendspage">
-<h1>Hi friends</h1>
+<section class="friends">
 
+  {{#each friends as |friend| }}
+  <div class="friend">
+    <h2 friend-name={{friend.username}}>{{friend.username}}</h2>
+  </div>
+  {{/each}}
 
-    <div>friend1</div>
-    <div>friend2</div>
-    <div>friend3</div>
-    <div>friend4</div>
-</div>  
+</section>
+
+<script src="/js/view-friend.js"></script>
