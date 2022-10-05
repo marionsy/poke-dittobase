@@ -112,8 +112,7 @@ router.get('/friends/:username', async (req, res) => {
     return await getPokemonData(pokemon.pokemon_name)
   }));
 
-  // TODO create friends-favorites.handlebars
-  res.render('favorites-page', {
+  res.render('friends-favorites', {
     favoritePokemon,
     friend_username: req.params.username,
     logged_in: req.session.logged_in

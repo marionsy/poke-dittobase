@@ -1,5 +1,5 @@
-const favorite = async () => {
-  const name = document.querySelector('#pokemon-image').getAttribute("alt");
+const favorite = async (event) => {
+  const name = event.target.getAttribute("pokemon-name");
 
   if (name) {
     const response = await fetch('/api/favorite/', {
@@ -19,4 +19,5 @@ const favorite = async () => {
   }
 };
 
-document.querySelector('#add-to-favorites').addEventListener('click', favorite);
+let elements = document.getElementsByClassName("add-to-favorites");
+Array.from(elements).forEach(element => element.addEventListener('click', favorite));
