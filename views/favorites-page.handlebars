@@ -1,22 +1,19 @@
-<section class="favorite-Pokemon">
-  <div class="jumbotron jumbotron-fluid">
-    <div class="container">
-      <h1 class="display-4 text-center">{{username}}'s Favorite Pokemon</h1>
-    </div>
+{{!-- <div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-6 text-center">Favorites</h1>
   </div>
+</div> --}}
 
-  {{#if favoritePokemon.length}}
-  <div class="container text-center">
-    <div class="row">
-      {{#each favoritePokemon as |pokemon| }}
-      {{> favorited-pokemon-card}}
-      {{/each}}
-    </div>
+{{#if favoritePokemon.length}}
+<div class="container text-center">
+  <div class="row">
+    {{#each favoritePokemon as |pokemon| }}
+    {{> favorited-pokemon-card}}
+    {{/each}}
   </div>
-  {{else}}
-  {{!-- TODO add error message if no favorited pokemon --}}
-  {{/if}}
-
-</section>
+</div>
+{{else}}
+{{!-- TODO add error message if no favorited pokemon --}}
+{{/if}}
 
 <script src="/js/delete-favorite.js"></script>

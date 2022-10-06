@@ -4,7 +4,7 @@ const searchHandler = async (event) => {
   const searchText = document.querySelector('#search-text').value.trim();
 
   if (searchText) {
-    document.location.replace('/search/pokemon/' + searchText);
+    document.location.replace('/search/pokemon/' + searchText.toLowerCase());
   }
 };
 

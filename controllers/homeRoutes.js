@@ -49,10 +49,23 @@ router.get('/homepage', withAuth, (req, res) => {
 router.get('/search/pokemon/:pokemon', withAuth, async (req, res) => {
   const pokemon = await getPokemonData(req.params.pokemon);
 
-  res.render('search-results', {
-    pokemon,
-    logged_in: req.session.logged_in
-  });
+  if (!pokemon) {
+    res.render('homepage', {
+      not_found: true,
+      user: {
+        username: req.session.username
+      },
+      logged_in: req.session.logged_in
+    });
+  } else {
+    res.render('search-results', {
+      user: {
+        username: req.session.username
+      },
+      pokemon,
+      logged_in: req.session.logged_in
+    });
+  }
 })
 
 // Get route to homepage
@@ -69,7 +82,9 @@ router.get('/favorites', withAuth, async (req, res) => {
 
   res.render('favorites-page', {
     favoritePokemon,
-    username: req.session.username,
+    user: {
+      username: req.session.username
+    },
     logged_in: req.session.logged_in
   });
 })
@@ -91,6 +106,9 @@ router.get('/friends', withAuth, async (req, res) => {
   });
 
   res.render('friends', {
+    user: {
+      username: req.session.username
+    },
     friends,
     logged_in: req.session.logged_in
   });
@@ -124,6 +142,9 @@ router.get('/friends/:username', withAuth, async (req, res) => {
   }));
 
   res.render('friends-favorites', {
+    user: {
+      username: req.session.username
+    },
     favoritePokemon,
     is_friend,
     friend_username: req.params.username,
