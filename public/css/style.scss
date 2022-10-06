@@ -1,10 +1,12 @@
 $Primary:#FFCB05;
 $Secondary:#3466AF;
-
+$font-family-pokemon: "Indie+Flower";
 @import '//node_modules/bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
 
-#header {
-  background-color: $Secondary;
+h1 {
+  
+  font-family: Indie Flower !important;
 }
 
 body {
