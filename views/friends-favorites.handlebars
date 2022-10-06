@@ -1,9 +1,10 @@
 <div class="jumbotron jumbotron-fuid">
   <div class="container">
-    <h1 class="display-6 text-center pt-3">{{friend_username}}'s Favorites</h1>
+    <h1 class="display-6 text-center pt-3" style="font-family: 'Indie Flower'">{{friend_username}}'s favorites</h1>
     <div class="d-flex justify-content-center">
       {{#unless is_friend}}
-      <a class="btn btn-primary btn-lg add-friend" friend-id={{friend_id}} href="#" role="button">Add Friend</a>
+      <a class="btn btn-primary btn-lg add-friend" style="font-family:'Montserrat'" friend-id={{friend_id}} href="#"
+        role="button">Add Friend</a>
       {{/unless}}
     </div>
   </div>
@@ -18,7 +19,7 @@
   </div>
 </div>
 {{else}}
-<h3>This person hasn't added any favorites yet!</h3>
+<h3 style="font-family:'Montserrat'">This person hasn't added any favorites yet!</h3>
 {{/if}}
 
 <script src="/js/add-favorite.js"></script>
