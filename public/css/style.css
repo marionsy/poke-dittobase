@@ -1,6 +1,7 @@
 @import '//node_modules/bootstrap/scss/bootstrap';
-#header {
-  background-color: #3466AF;
+@import url("https://fonts.googleapis.com/css?family=Indie+Flower");
+h1 {
+  font-family: Indie Flower !important;
 }
 
 body {

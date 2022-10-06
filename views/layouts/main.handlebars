@@ -19,14 +19,24 @@
     </div>
   </div>
 
+
   <nav>
+
+
+  <nav class="bg-primary fs-4">
+
     {{#if logged_in}}
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-primary text-center">
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary ">
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
+
           <li class="nav-item active">
             <a class="nav-link"><i class="fa-solid fa-user"></i>{{user.username}}</a>
+
+          <li class="nav-item active text-md">
+            <a class="nav-link text-md" href="/homepage"><i class="fa-solid fa-house"></i> Home</a>
+
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="/homepage"><i class="fa-solid fa-house"></i>Home</a>
