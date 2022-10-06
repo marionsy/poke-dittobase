@@ -1,11 +1,19 @@
 @import '//node_modules/bootstrap/scss/bootstrap';
+
 @import url("https://fonts.googleapis.com/css?family=Indie+Flower");
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
 h1 {
   font-family: Indie Flower !important;
 }
 
 body {
   background-color: #FFCB05;
+}
+
+.card {
+  font-family: "Montserrat", "sans-serif";
 }
 
 footer {

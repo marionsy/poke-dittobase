@@ -2,18 +2,19 @@
   <div class="row mt-5">
     <div class="col-4"></div>
     <div class="col-4">
-      <div class="card" style="width: 25rem; border-radius: 5%">
+      <div class="card" style="border-radius: 5%">
         <img src={{pokemon.image}} class="card-img-top" alt={{pokemon.name}}>
         <div class="card-body">
-          <h5 class="card-title">{{pokemon.name}}</h5>
-          <p class="card-text">{{pokemon.description}}</p>
+          <h5 class="card-title" style="font-family:'Montserrat'">{{pokemon.name}}</h5>
+          <p class="card-text" style="font-family:'Montserrat'">{{pokemon.description}}</p>
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">Ability: {{pokemon.ability}}</li>
-          <li class="list-group-item">Original Game: {{pokemon.game}}</li>
+          <li class="list-group-item" style="font-family:'Montserrat'">Ability: {{pokemon.ability}}</li>
+          <li class="list-group-item" style="font-family:'Montserrat'">Original Game: {{pokemon.game}}</li>
         </ul>
         <div class="card-body">
-          <a href="#" class="card-link add-to-favorites text-dark" pokemon-name={{pokemon.name}}>Add to favorites</a>
+          <a href="#" class="card-link add-to-favorites text-dark" style="font-family:'Montserrat'"
+            pokemon-name={{pokemon.name}}>Add to favorites</a>
         </div>
       </div>
     </div>
