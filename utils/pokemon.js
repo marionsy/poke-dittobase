@@ -18,7 +18,6 @@ const getPokemonData = async (pokemonName) => {
 
   } catch (e) {
     console.log(e);
-    pokemon = {found: false}
   }
 
   return pokemon;

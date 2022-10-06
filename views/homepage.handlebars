@@ -1,8 +1,10 @@
+
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
     <h1 class="display-4 text-center font-family">Welcome {{user.username}}</h1>
   </div>
 </div>
+
 
 <div class="container text-center">
   <div class="row">
@@ -13,14 +15,14 @@
 </div>
 
 <div class="input-group mb-3 w-50 p-3 mx-auto">
-  <input type="text" id="search-text" class="form-control" placeholder="Search for your Pokemon!.." aria-label="Search for your Pokemon!.." aria-describedby="basic-addon2">
+  <input type="text" id="search-text" class="form-control" placeholder="Hi {{user.username}}! Try searching for a pokemon to start!" aria-label="Hi {{user.username}}! Try typing in a pokemon to start!" aria-describedby="basic-addon2">
   <div class="input-group-append">
     <button class="btn btn-outline-secondary searchbtn bg-primary text-warning" type="button">Find pokemon!</button>
   </div>
 </div>
 
-{{!-- TODO update --}}
-<div id="error-text" hidden>No pokemon found!</div>
-</div>
+{{#if not_found}}
+  <div class="alert alert-secondary mb-3 w-25 p-3 mx-auto text-center" role="alert">No pokemon found, please search again!</div>
+{{/if}}
 
 <script src="/js/search.js"></script>
