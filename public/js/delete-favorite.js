@@ -1,3 +1,4 @@
+// Call api to delete favorite and return to favorite page when done
 const deleteFromFavorites = async (event) => {
   const name = event.target.getAttribute("pokemon-name");
 

@@ -1,3 +1,4 @@
+// Call api to add friend and return to friend page when done
 const addFriend = async (event) => {
   const id = event.target.getAttribute("friend-id");
 

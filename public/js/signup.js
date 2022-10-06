@@ -1,3 +1,4 @@
+// Create a user and return to homepage
 const signupFormHandler = async (event) => {
   event.preventDefault();
 
@@ -13,7 +14,7 @@ const signupFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/usersmainpage');
+      document.location.replace('/homepage');
     } else {
       alert(response.statusText);
     }

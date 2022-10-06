@@ -1,3 +1,4 @@
+// Log the user in and return to homepage when done
 const loginFormHandler = async (event) => {
   event.preventDefault();
 

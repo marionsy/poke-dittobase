@@ -1,3 +1,4 @@
+// Call api to delete friend and return to friend page when done
 const deleteFriend = async (event) => {
   const id = event.target.getAttribute("friend-id");
 

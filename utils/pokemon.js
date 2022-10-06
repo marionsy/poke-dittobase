@@ -1,6 +1,7 @@
 const Pokedex = require('pokedex-promise-v2');
 const P = new Pokedex();
 
+// Helper API function to retrieve pokemon data
 const getPokemonData = async (pokemonName) => {
   let pokemon;
   try {

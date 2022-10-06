@@ -1,3 +1,4 @@
+// Call api to favorite and return to homepage when done
 const favorite = async (event) => {
   const name = event.target.getAttribute("pokemon-name");
 

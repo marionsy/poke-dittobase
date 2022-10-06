@@ -1,3 +1,4 @@
+// Redirect to search page
 const searchHandler = async (event) => {
   event.preventDefault();
 
